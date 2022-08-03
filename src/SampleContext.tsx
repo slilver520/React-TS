@@ -67,6 +67,7 @@ export function SampleProvider({ children }: { children: React.ReactNode }) {
 }
 
 // state 와 dispatch 를 쉽게 사용하기 위한 커스텀 Hooks
+//throw new Error 해줘
 export function useSampleState() {
   const state = useContext(SampleStateContext);
   if (!state) throw new Error('Cannot find SampleProvider'); // 유효하지 않을땐 에러를 발생
