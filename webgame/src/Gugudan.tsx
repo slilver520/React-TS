@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { useState, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 
 const GuGuDan = () => {
   const [first, setFirst] = useState(Math.ceil(Math.random() * 9));
@@ -7,6 +6,7 @@ const GuGuDan = () => {
   const [value, setValue] = useState('');
   const [result, setResult] = useState('');
   const inputEl = useRef<HTMLInputElement>(null);
+  //useRef는 리렌더링 하지 않는다. 컴포넌트의 속성만 조회&수정한다.
 
   const onSubmitForm = (e: React.FormEvent) => {
     e.preventDefault();
